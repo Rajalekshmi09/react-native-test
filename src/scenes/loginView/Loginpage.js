@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import LoginScreen from "react-native-login-screen";
-import {  Text, View } from 'react-native';
+import {  Text, View ,spinnerVisibility ,setSpinnerVisibility } from 'react-native';
 
-export default class LoginScreen extends React.Component {
+export default class Loginpage extends Component {
     render(){
         return (
             <LoginScreen
