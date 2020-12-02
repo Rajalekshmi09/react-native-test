@@ -69,10 +69,11 @@ const style = StyleSheet.create({
         resizeMode: 'cover' 
     },
     pagination: 
-    { flexDirection: 'row', 
-    position: 'absolute', 
-    bottom: 0, 
-    alignSelf: 'center' 
+    { 
+        flexDirection: 'row', 
+        position: 'absolute', 
+        bottom: 0, 
+        alignSelf: 'center' 
     },
     pagingText: 
     { 

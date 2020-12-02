@@ -1,30 +1,31 @@
 
 import React, {Component} from 'react';
-import { View } from 'react-native';
+import 'react-native-gesture-handler';
 import Cardcontainer from './src/scenes/Cardcontainer';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
+import Home from './src/pages/Home';
 import List from './src/scenes/List';
-import Loginpage from './src/scenes/loginView/Loginpage';
-import Slider from './src/scenes/Header/Slider';
+import flatList from './src/scenes/flatList';
+
+
 const Stack = createStackNavigator();
-
-
 
 export default class App extends Component {
   render(){
     return (
-      
+    
       <NavigationContainer>      
-        <Stack.Navigator>  
+       
+        <Stack.Navigator headerMode="none">  
             <Stack.Screen
-              name="card"
-              component={Cardcontainer}
+              name="Card"
+              component={Home}
               options={{ title: 'Home' }}
             />
-            <Stack.Screen name="List" component={Slider} />   
-         
+            <Stack.Screen name="History" component={flatList} />   
+            
         </Stack.Navigator>        
       </NavigationContainer>
     );
