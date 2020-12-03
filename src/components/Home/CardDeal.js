@@ -30,7 +30,6 @@ export default class CardDeal extends Component {
     }
 }
 
-
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',

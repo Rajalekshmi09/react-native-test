@@ -8,8 +8,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Home from './src/pages/Home';
 import List from './src/scenes/List';
 import flatList from './src/scenes/flatList';
-
-
+import SideMenu from './src/Drawer/SideMenu';
+import CardDeal from './src/components/Home/CardDeal';
 const Stack = createStackNavigator();
 
 export default class App extends Component {
@@ -24,10 +24,12 @@ export default class App extends Component {
               component={Home}
               options={{ title: 'Home' }}
             />
-            <Stack.Screen name="History" component={flatList} />   
+            <Stack.Screen name="History" component={SideMenu} />   
             
         </Stack.Navigator>        
       </NavigationContainer>
     );
    }
 }
+
+

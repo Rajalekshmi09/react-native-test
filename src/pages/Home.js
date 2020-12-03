@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/Entypo';
 import CardDeal from '../components/Home/CardDeal';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
-import {productList} from "../app-utils"
+import {productList} from "../app-utils";
 import Slider from '../scenes/Header/Slider';
 
 const data = [

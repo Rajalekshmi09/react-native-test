@@ -4,6 +4,7 @@ import { View, Image, Dimensions, Text, StyleSheet, ScrollView } from 'react-nat
 const { width } = Dimensions.get("window");
 const height = width * 0.6;
 const images = [
+    
     'https://images.pexels.com/photos/773594/pexels-photo-773594.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     'https://images.pexels.com/photos/310386/pexels-photo-310386.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260',
     'https://images.pexels.com/photos/3397935/pexels-photo-3397935.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',

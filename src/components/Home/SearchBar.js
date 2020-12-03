@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput ,TouchableOpacity , Header } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import Icon1 from 'react-native-vector-icons/AntDesign';
 
 export default class SearchBar extends Component {
+  constructor (props){
+    super(props)
+  }
   render() {
+    const { navigation } = this.props;
+   
     return (
+
       <View style={styles.container}>
+        
+        <TouchableOpacity onPress={() =>  this.props.navigation.openDrawer('SideMenu')}>
         <Icon name="menu" size={30} color="#222" />
+        </TouchableOpacity>
         <View style={styles.searchBar}>
           <Icon name="search" size={20} color="gray" />
           <TextInput placeholder="Search" style={styles.input} />
@@ -15,9 +24,10 @@ export default class SearchBar extends Component {
         <View style={styles.cart}>
           <Icon1 name="shoppingcart" size={30} color="gray" />
           <View style={styles.badge}>
-            <Text style={styles.badgeText}>4</Text>
+            <Text style={styles.badgeText}></Text>
           </View>
         </View>
+     
       </View>
     );
   }
