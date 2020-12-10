@@ -1,4 +1,3 @@
-
 import { StyleSheet, FlatList, Text, View } from 'react-native';
 import React, {Component} from 'react';
 

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput ,TouchableOpacity , Header } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import Icon1 from 'react-native-vector-icons/AntDesign';
+import SideMenu from '../../Drawer/SideMenu';
+
 
 export default class SearchBar extends Component {
   constructor (props){
@@ -13,8 +15,8 @@ export default class SearchBar extends Component {
     return (
 
       <View style={styles.container}>
-        
-        <TouchableOpacity onPress={() =>  this.props.navigation.openDrawer('SideMenu')}>
+      
+        <TouchableOpacity onPress={() =>  navigation.openDrawer(SideMenu)}>
         <Icon name="menu" size={30} color="#222" />
         </TouchableOpacity>
         <View style={styles.searchBar}>

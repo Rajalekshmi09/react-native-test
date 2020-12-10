@@ -9,30 +9,18 @@ import { useNavigation } from '@react-navigation/native';
 import {productList} from "../app-utils";
 import Slider from '../scenes/Header/Slider';
 
+
 const data = [
     'Vegetables',
     'Fruits',
     'Dry fruits',
-    'Dairy & Bakery',
+    'Dairy',
     'Beverages',
     'Staples',
     'Home Care',
     'Baby Care',
 ];
-const listdeal = [
-    {
-        type: 'Navi coat',
-        price: '$9',
-    },
-    {
-        type: 'Whale toy',
-        price: '$9',
-    },
-    {
-        type: 'Bear toy',
-        price: '$9',
-    },
-];
+
 
 
 export default class Home extends Component {
@@ -47,7 +35,7 @@ export default class Home extends Component {
                 <SearchBar />
                 <Slider />
                 <View style={styles.listcardTop}>
-                    <Text style={styles.titleCatalogue}>Catalogue</Text>
+                    <Text style={styles.titleCatalogue}>Categories</Text>
                     <View style={styles.listcard}>
                         {data.map(collections => {
                             return (
@@ -71,9 +59,9 @@ export default class Home extends Component {
                                     type = {product.name}
                                     item = {product.item}
                                     price = {product.price}
-                                   
+ 
                                 />
-                            )                                
+                            )
                         })}
                     </View>
                 </View>
