@@ -11,7 +11,7 @@ export default class CardDeal extends Component {
         return (
             <View style={styles.container}>
                 <Image
-                    source={{uri: 'https://images.pexels.com/photos/209339/pexels-photo-209339.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'}}
+                     source={require("../../../assets/image/img11.jpeg")}
                     style={styles.image}
                 />
             <View style={styles.body}>

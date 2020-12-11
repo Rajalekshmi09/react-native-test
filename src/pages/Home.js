@@ -8,6 +8,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import {productList} from "../app-utils";
 import Slider from '../scenes/Header/Slider';
+import Profile from '../scenes/Header/Profile';
 
 
 const data = [
@@ -31,11 +32,14 @@ export default class Home extends Component {
         const { navigation } = this.props;
         return (           
             <SafeAreaView style={styles.container}>
+              
                 <ScrollView style={styles.scrollView}>
                 <SearchBar />
                 <Slider />
+               
                 <View style={styles.listcardTop}>
                     <Text style={styles.titleCatalogue}>Categories</Text>
+                    
                     <View style={styles.listcard}>
                         {data.map(collections => {
                             return (
@@ -52,6 +56,7 @@ export default class Home extends Component {
                             <Icon name="chevron-thin-right" size={18} />
                         </View>
                     </View>
+                   
                     <View>
                         {productList.map(product => {
                             return (
