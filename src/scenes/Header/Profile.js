@@ -1,115 +1,127 @@
 import React, { Component } from 'react';
-import {
-  Text,
-  FlatList,
-  Image,
-  StyleSheet,
-  Dimensions,
-  View,
-  ScrollView,
-  TextInput,
-  TouchableOpacity
-} from 'react-native';
-var { height, width } = Dimensions.get('window');
+import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { Button } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/Fontisto';
+import { itemList } from '../../app-utils';
+import SearchBar from '../../components/Home/SearchBar';
 
-export default class Profile extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-
-      dataFood: [],
-      selectCatg: 0
-    }
-  }
-
-  componentDidMount() {
-    const url = "http://tutofox.com/foodapp/api.json"
-    return fetch(url)
-      .then((response) => response.json())
-      .then((responseJson) => {
-
-        this.setState({
-          isLoading: false,
-          dataFood: responseJson.food
-        });
-
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
+export default class List extends Component {
   render() {
-    return (
-      <ScrollView>
-        <View style={styles.container}>
-          <FlatList
-            //horizontal={true}
-            data={this.state.dataFood}
-            numColumns={3}
-            renderItem={({ item }) => this._renderItemFood(item)}
-            keyExtractor={(item, index) => index.toString()}
-          />
-          <View style={{ height: 10 }} />
-        </View>
-      </ScrollView>
+    const item = itemList.map((item, index) => {
 
-    );
-  }
-  _renderItemFood(item) {
-    let catg = this.state.selectCatg
-    if (catg == 0 || catg == item.categorie) {
-      return (
-        <TouchableOpacity style={styles.divFood}>
+      return <View key={item.id} style={styles.item}>
+        <View style={styles.img}>
           <Image
-            style={styles.imageFood}
-            resizeMode="contain"
-            source={{ uri: item.image }} />
-          <View style={{ height: ((width / 2) - 20) - 90, backgroundColor: 'transparent', width: ((width / 2) - 20) - 10 }} />
-          {/* <Text style={{ fontWeight: 'bold', fontSize: 22, textAlign: 'center' }}>
-            {item.name}
-          </Text> */}
-          <Text style={{ alignItems: "center"}}>Fruits & Vegetables</Text>
-          {/* <Text style={{ fontSize: 20, color: "green" }}>${item.price}</Text> */}
-        </TouchableOpacity>
-      )
-    }
+            source={{ uri: item.imageurl }}
+            style={{ width: 120, height: 90, margin: 5 }}
+          >
+          </Image>
+        </View>
+
+        <View style={styles.body}>
+          <Text style={styles.text}>{item.text} </Text>
+          <Text style={styles.bodyPrice}>  {item.price}</Text>
+          <Text style={styles.textkg}>{item.size} </Text>
+        </View>
+
+        <View>
+          <Button style={styles.btn}
+            icon={
+              <Icon
+                name="shopping-basket-add"
+                size={15}
+                color="white"
+              />
+            }
+            title=" Add "
+          />
+        </View>
+
+      </View>
+    })
+    return (
+
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <SearchBar />
+        </View>
+        <View style={styles.contentContainer}>
+
+          <ScrollView >
+            <View>
+              {item}
+            </View>
+          </ScrollView>
+        </View>
+      </View>
+
+    )
   }
-}
+};
 
 const styles = StyleSheet.create({
-
   container: {
-    width: width,
-    borderRadius: 40,
-    paddingVertical: 5,
-    backgroundColor: '#cae0de',
-    paddingTop: 60,
+    paddingTop: 30,
+
   },
-  titleCatg: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 10
-  },
-  imageFood: {
-    width: ((width / 2) - 20) - 80,
-    height: ((width / 2) - 20) - 10,
-    backgroundColor: 'transparent',
-    position: 'absolute',
-    top: -45
-  },
-  divFood: {
-    width: (width / 2) - 80,
-    padding: 10,
-    borderRadius: 10,
-    marginTop: 5,
-    marginBottom: 5,
-    marginLeft: 10,
+  header: {
+    paddingTop: 20,
+    height: 80,
+    backgroundColor: '#3f8fd1',
     alignItems: 'center',
-    elevation: 8,
-    shadowOpacity: 0.3,
-    shadowRadius: 50,
-    backgroundColor: '#f0f7f6',
+    justifyContent: 'center',
+  },
+  // headerText: {
+  //   fontSize: 20,
+  //   fontWeight: 'bold',
+  //   color: 'white',
+  // },
+  contentContainer: {
+    backgroundColor: '#f2f5f5',
+    paddingTop: 30,
+
+  },
+  body: {
+    flex: 1,
+    paddingHorizontal: 20,
+  },
+  item: {
+    flexDirection: 'row',
+    borderBottomWidth: 1,
+    borderBottomColor: '#e4e7ed',
+    alignItems: 'center',
+  },
+  // marginLeft: {
+  //   marginLeft: 5,
+  // },
+
+  text: {
+    //marginVertical: 30,
+    fontSize: 20,
+    // fontWeight: 'bold',
+    marginLeft: 10,
+  },
+  textkg: {
+    fontSize: 15,
+    marginLeft: 10,
+    color: "#2dba54"
+  },
+  // moreIcon: {
+  //   color: "#d6d7da",
+  //   alignContent: 'flex-end',
+  // },
+  btn: {
+    alignItems: 'flex-end',
+    marginLeft: 50
+  },
+  bodyPrice: {
+    fontWeight: '500',
+    color: 'red',
+    fontSize: 16,
+    marginVertical: 3,
+  },
+  img: {
+    flexDirection: 'row',
+    padding: 10,
   }
-});
+}) 

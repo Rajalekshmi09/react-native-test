@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
-import Data from '../app-utils';
+import { Data } from '../app-utils';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import SearchBar from '../components/Home/SearchBar';
 
@@ -9,7 +9,7 @@ export default class List extends Component {
         const item = Data.map((item, index) => {
 
             return <View key={item.id} style={styles.item}>
-
+                
                 <Image
                     source={{ uri: item.imageurl }}
                     style={{ width: 70, height: 70, margin: 5 }}

@@ -1,4 +1,6 @@
-export default Data = [
+
+
+export const  Data = [
     {
         id: 1,
         text: 'Fruits',
@@ -70,7 +72,7 @@ export const productList = [
         name: 'Orange',
         item: 'Fruits',
         price: '$9',
-        imageurl: 'https://images.pexels.com/photos/220911/pexels-photo-220911.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        imageurl: 'https://images.pexels.com/photos/873652/pexels-photo-873652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
 
     },
     {
@@ -84,13 +86,13 @@ export const productList = [
         name: 'Potato',
         item: 'Vegetables',
         price: '$9',
-        imageurl: 'https://www.jiomart.com/images/product/150x150/491187481/bournvita-750-g-0-20200916.jpg',
+        imageurl: 'https://images.pexels.com/photos/1292862/pexels-photo-1292862.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     },
     {
         name: 'Pistha',
         item: 'Dry Fruits',
         price: '$9',
-        imageurl: 'https://www.jiomart.com/images/product/150x150/490000041/aashirvaad-whole-wheat-atta-10-kg-0-20201117.jpg',
+        imageurl: 'https://images.pexels.com/photos/3731877/pexels-photo-3731877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
 
 
     },
@@ -98,7 +100,7 @@ export const productList = [
         name: 'Grapes',
         item: 'Fruits',
         price: '$9',
-        imageurl: 'https://www.jiomart.com/images/product/150x150/490003796/surf-excel-easy-wash-detergent-powder-1-5-kg-0-20200919.jpg',
+        imageurl: 'https://images.pexels.com/photos/302539/pexels-photo-302539.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
 
     },
 
@@ -194,87 +196,97 @@ export const food= [
       "image": "http://tutofox.com/foodapp//food/burger/burger-2.png"
     },
     {
-      "name": "Burger Special",
-      "price": 16,
-      "categorie": 2,
-      "image": "http://tutofox.com/foodapp//food/burger/burger-3.png"
-    },
-    {
-      "name": "Burger Cheese",
-      "price": 16,
-      "categorie": 2,
-      "image": "http://tutofox.com/foodapp//food/burger/burger-4.png"
-    },
-    {
-      "name": "Burger Farmer",
-      "price": 16,
-      "categorie": 1,
-      "image": "http://tutofox.com/foodapp//food/burger/burger-5.png"
-    },
-    {
-      "name": "Mini Burger",
-      "price": 16,
-      "categorie": 2,
-      "image": "http://tutofox.com/foodapp//food/burger/burger-6.png"
-    },
-    {
-      "name": "Pizza Vegan",
-      "price": 14,
-      "categorie": 3,
-      "image": "http://tutofox.com/foodapp//food/pizza/pizza-1.png"
-    },
-    {
-      "name": "Pizza Bufalisimo",
-      "price": 14,
-      "categorie": 3,
-      "image": "http://tutofox.com/foodapp//food/pizza/pizza-2.png"
-    },
-    {
       "name": "Pizza Haiwaiana",
       "price": 13,
       "categorie": 3,
       "image": "http://tutofox.com/foodapp//food/pizza/pizza-3.png"
     },
+    
+  ]
+
+  export const Products=[
     {
-      "name": "Pizza Peperoni",
-      "price": 16,
-      "categorie": 3,
-      "image": "http://tutofox.com/foodapp//food/pizza/pizza-4.png"
-    },
-    {
-      "name": "Pizza Vegan 2",
-      "price": 12,
-      "categorie": 3,
-      "image": "http://tutofox.com/foodapp//food/pizza/pizza-5.png"
-    },
-    {
-      "name": "Pizza Napolitana",
-      "price": 18,
-      "categorie": 3,
-      "image": "http://tutofox.com/foodapp//food/pizza/pizza-6.png"
-    },
-    {
-      "name": "Coca cola",
-      "price": 2,
-      "categorie": 4,
-      "image": "http://tutofox.com/foodapp//food/drink/cocacola.png"
-    },
-    {
-      "name": "Pepsi",
-      "price": 2,
-      "categorie": 4,
-      "image": "http://tutofox.com/foodapp//food/drink/pepsi.png"
-    },
-    {
-      "name": "Quatro",
-      "price": 2,
-      "categorie": 4,
-      "image": "http://tutofox.com/foodapp//food/drink/quatro.png"
-    },
-    {
-      "name": "Sprite",
-      "price": 2,
-      "categorie": 4,
-      "image": "http://tutofox.com/foodapp//food/drink/sprite.png"
+    id: 1,
+    text: 'Carrot',
+    imageurl: 'https://mybabybugcom.files.wordpress.com/2016/11/chicco.jpg',
+    price: "$40.00",
     }
   ]
+
+  export const  itemList = [
+    {
+        id: 1,
+        text: 'Apple',
+        price: "$150.00",
+        size: "1 kg",
+        imageurl: 'https://images.pexels.com/photos/209439/pexels-photo-209439.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    },
+    {
+        id: 2,
+        text: 'Orange',
+        price: "$140.00",
+        size: "1 kg",
+        imageurl: 'https://images.pexels.com/photos/207085/pexels-photo-207085.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    },
+    {
+        id: 3,
+        text: 'Grapes',
+        price: "$80.00",
+        size: "100g",
+        imageurl: 'https://images.pexels.com/photos/708777/pexels-photo-708777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    },
+    {
+        id: 4,
+        text: 'Mango',
+        price: "$140.00",
+        size: "1 kg",
+        imageurl: 'https://images.pexels.com/photos/2294471/pexels-photo-2294471.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    },
+    {
+        id: 5,
+        text: 'Banana',
+        price: "$60.00",
+        size: "100g",
+        imageurl: 'https://images.pexels.com/photos/61127/pexels-photo-61127.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    },
+    {
+        id: 6,
+        text: 'Strawberry',
+        size: "100g",
+        price: "$80.00",
+
+        imageurl: 'https://images.pexels.com/photos/1435301/pexels-photo-1435301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    },
+    {
+        id: 7,
+        text: 'Cherry',
+        price: "$50.00",
+        size: "100g",
+        imageurl: 'https://images.pexels.com/photos/175727/pexels-photo-175727.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    },
+    {
+        id: 8,
+        text: 'Watermelon',
+        price: "$40.00",
+        size: "1 No's",
+        imageurl: 'https://images.pexels.com/photos/1178652/pexels-photo-1178652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    },
+    {
+        id: 8,
+        text: 'Watermelon',
+        price: "$40.00",
+        size: "1 No's",
+        imageurl: 'https://images.pexels.com/photos/1178652/pexels-photo-1178652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    },
+    {
+        id: 8,
+        text: 'Watermelon',
+        price: "$40.00",
+        size: "1 No's",
+        imageurl: 'https://images.pexels.com/photos/1178652/pexels-photo-1178652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    },
+
+]
+
+
+

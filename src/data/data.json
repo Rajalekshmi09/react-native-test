@@ -1,0 +1,76 @@
+
+{
+    "banner": [
+      "http://tutofox.com/foodapp//banner/banner-1.jpg",
+      "http://tutofox.com/foodapp//banner/banner-2.jpg",
+      "http://tutofox.com/foodapp//banner/banner-3.png"
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": "American",
+        "color": "#fbc831",
+        "image": "http://tutofox.com/foodapp//categories/american.png"
+      },
+      {
+        "id": 2,
+        "name": "Burger",
+        "color": "#9fd236",
+        "image": "http://tutofox.com/foodapp//categories/burger.png"
+      },
+      {
+        "id": 3,
+        "name": "Pizza",
+        "color": "orange",
+        "image": "http://tutofox.com/foodapp//categories/pizza.png"
+      },
+      {
+        "id": 4,
+        "name": "Drink",
+        "color": "#f2f2f2",
+        "image": "http://tutofox.com/foodapp//categories/drink.png"
+      }
+    ],
+    "food": [
+      {
+        "name": "Fresh Fruits",
+        "image": "https://images.pexels.com/photos/68525/soap-colorful-color-fruit-68525.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      },
+     
+      {
+        "name": " Vegetables",
+        "image": "https://images.pexels.com/photos/1300972/pexels-photo-1300972.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      },
+      {
+        "name": "Dry Fruits",
+        "image": "https://images.pexels.com/photos/3872425/pexels-photo-3872425.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      },
+     
+      {
+        "name": "Dairy & Bekery",
+        "image": "https://www.ahealthiermichigan.org/wp-content/uploads/2019/06/dairy-food-options-600x300.jpg"
+      },
+      {
+        "name": "Beverages",
+        "image": "https://www.dsij.in/Portals/0/EasyDNNnews/13205/img-Tata-coffee.jpg"
+      },
+      {
+        "name": "Staples",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51jpzkeMspL.jpg"
+      },
+      
+      {
+        "name": "Snacks & Branded Foods",
+        "image": "https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      },
+      {
+        "name": "Baby Care",
+        "image": "https://rukminim1.flixcart.com/image/400/400/jz4g3gw0/baby-care-combo/f/b/x/happy-baby-gift-pack-5-8901138839420-himalaya-original-imafj7pgh5dnxhyz.jpeg?q=90"
+      },
+      {
+        "name": "Personal Cares",
+        "image": "https://i1.wp.com/www.highongloss.com/wp-content/uploads/2017/04/himalaya-kesar-face-wash-clear-complexion-whitening-face-wash.jpg?fit=960%2C640&ssl=1"
+      }
+      
+    ]
+  }

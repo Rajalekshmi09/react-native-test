@@ -8,9 +8,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import {productList} from "../app-utils";
 import Slider from '../scenes/Header/Slider';
-import Profile from '../scenes/Header/Profile';
-
-
+import CardScroll from '../components/Home/CardScroll';
+import Cardcontainer from '../scenes/Cardcontainer';
 const data = [
     'Vegetables',
     'Fruits',
@@ -36,7 +35,8 @@ export default class Home extends Component {
                 <ScrollView style={styles.scrollView}>
                 <SearchBar />
                 <Slider />
-               
+               <Cardcontainer/>
+               <CardScroll/>
                 <View style={styles.listcardTop}>
                     <Text style={styles.titleCatalogue}>Categories</Text>
                     
@@ -78,7 +78,7 @@ export default class Home extends Component {
         const styles = StyleSheet.create({
             container: {
                 flex: 1,
-                padding: 15,
+                padding: 5,
                 backgroundColor: '#fff',
             },
             listcardTop: {
