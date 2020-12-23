@@ -21,7 +21,7 @@ export default class Card extends Component {
         <View style={styles.cardContainer}>
         <View style={styles.cardTop}>
             <Image
-                source={require("../../../assets/image/apple1.jpeg")}
+                source={require("../../../assets/image/Apple.png")}
                 style={styles.image}
             />
         </View>

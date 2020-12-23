@@ -40,11 +40,11 @@ export default class List extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 30,
+        //paddingTop: 30,
       },
     header: {
         paddingTop: 20,
-        height: 80,
+        height: 100,
         backgroundColor: '#3f8fd1',
         alignItems: 'center',
         justifyContent: 'center',

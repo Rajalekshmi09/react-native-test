@@ -3,11 +3,12 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from './src/pages/Home';
-import SideMenu from './src/Drawer/SideMenu';
+import Cardcontainer from './src/scenes/Cardcontainer';
 import Profile from './src/scenes/Header/Profile';
 import List from './src/listPages/List';
-import cardScroll from './src/components/Home/CardScroll';
-import fruitList from './src/listPages/fruitList';
+import CardView from './src/listPages/CardView';
+
+import ProductCard from './src/listPages/ProductCard';
 const Stack = createStackNavigator();
 
 export default class App extends Component {
@@ -22,7 +23,7 @@ export default class App extends Component {
               component={Home}
               options={{ title: 'Home' }}
             />
-            <Stack.Screen name="History" component={SideMenu} />   
+            <Stack.Screen name="History" component={ProductCard} />   
             
         </Stack.Navigator>        
       </NavigationContainer>

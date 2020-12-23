@@ -8,21 +8,21 @@
     "categories": [
       {
         "id": 1,
-        "name": "American",
+        "name": "Fruits",
         "color": "#fbc831",
-        "image": "http://tutofox.com/foodapp//categories/american.png"
+        "image": "https://freepngimg.com/thumb/fruit/4-2-fruit-png-image-thumb.png"
       },
       {
         "id": 2,
-        "name": "Burger",
+        "name": "Vegetables",
         "color": "#9fd236",
-        "image": "http://tutofox.com/foodapp//categories/burger.png"
+        "image": "https://freepngimg.com/thumb/vegetable/3-2-vegetable-transparent-thumb.png"
       },
       {
         "id": 3,
-        "name": "Pizza",
+        "name": "Dairy Items",
         "color": "orange",
-        "image": "http://tutofox.com/foodapp//categories/pizza.png"
+        "image": "https://freepngimg.com/thumb/milk/4-2-milk-png-clipart-thumb.png"
       },
       {
         "id": 4,
