@@ -1,6 +1,6 @@
 //const { NativeModules } = require("react-native");
 
-export var listDatas = [
+export const listDatas = [
     {
         key: 1,
         name: 'Apple',
@@ -13,8 +13,7 @@ export var listDatas = [
         name: 'Orange',
         item: 'Fruits',
         price: '$9',
-        imageurl: 'https://images.pexels.com/photos/873652/pexels-photo-873652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-
+        imageurl: 'https://i.pinimg.com/originals/50/91/3e/50913eeb04768a5b1fa9985c16704d96.jpg',
     },
     {
         key: 3,
@@ -22,7 +21,6 @@ export var listDatas = [
         item: 'Dry Fruits',
         price: '$11',
         imageurl: 'https://images.pexels.com/photos/162786/ingredients-butter-cheese-cookies-162786.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-
     },
     {
         key: 4,
@@ -37,8 +35,6 @@ export var listDatas = [
         item: 'Dry Fruits',
         price: '$9',
         imageurl: 'https://images.pexels.com/photos/3731877/pexels-photo-3731877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-
-
     },
     {
         key: 6,

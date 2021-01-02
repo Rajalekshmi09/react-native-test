@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import SearchBar from '../components/Home/SearchBar';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import Card from '../components/Home/Card';
 import Icon from 'react-native-vector-icons/Entypo';
-import CardDeal from '../components/Home/CardDeal';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
+
 import { productList } from "../app-utils";
+import Cardcontainer from '../components/Home/Cardcontainer';
+import SearchBar from '../components/Home/SearchBar';
 import Slider from '../components/Home/Slider';
 import CardScroll from '../components/Home/CardScroll';
+import Card from '../components/Home/Card';
+import CardDeal from '../components/Home/CardDeal';
 import CardView from '../listPages/CardView';
-import Cardcontainer from '../scenes/Cardcontainer';
+
 const data = [
     'Vegetables',
     'Fruits',
@@ -22,8 +24,6 @@ const data = [
     'Baby Care',
 ];
 
-
-
 export default class Home extends Component {
     constructor(props) {
         super(props)
@@ -33,14 +33,14 @@ export default class Home extends Component {
         return (
             <SafeAreaView style={styles.container}>
 
-                <View style={styles.header}>
+                {/* <View style={styles.header}>
                     <SearchBar />
-                </View>
+                </View> */}
                 <ScrollView style={styles.scrollView}>
 
                     <Slider />
                     <Cardcontainer />
-                    <CardView/>
+                    <CardView />
                     <CardScroll />
                     <View style={styles.listcardTop}>
                         <Text style={styles.titleCatalogue}>Categories</Text>
@@ -64,15 +64,16 @@ export default class Home extends Component {
 
                         <View>
                             {productList.map(product => {
+
                                 return (
                                     <CardDeal
                                         type={product.name}
                                         item={product.item}
                                         price={product.price}
-
                                     />
                                 )
                             })}
+
                         </View>
                     </View>
                 </ScrollView>
@@ -83,13 +84,13 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 5,
+        //padding: 5,
         backgroundColor: '#fff',
     },
     header: {
         paddingTop: 10,
         height: 70,
-        backgroundColor: '#3f8fd1',
+        //backgroundColor: '#3f8fd1',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 8

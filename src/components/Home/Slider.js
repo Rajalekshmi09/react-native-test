@@ -54,10 +54,11 @@ export default class Slider extends Component {
 const style = StyleSheet.create({
     container: 
     { 
-        marginTop: 30, 
+       // marginTop: 30, 
         width, 
         height ,
-        
+       
+        backgroundColor: 'gray' ,
     },
     scroll: 
     { 

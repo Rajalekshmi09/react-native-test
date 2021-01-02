@@ -8,13 +8,15 @@ import {
   Image,
   Dimensions,
 } from 'react-native';
-import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
+import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon1 from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../data/colors';
-import plants from '../data/plants';
+import fruitProduct from '../data/fruitProduct';
+
 const width = Dimensions.get('window').width / 2 - 30;
 
-const HomeScreen = ({navigation}) => {
+const ProductCard = ({ navigation }) => {
   const [catergoryIndex, setCategoryIndex] = React.useState(0);
 
   const categories = ['POPULAR', 'ORGANIC', 'INDOORS', 'SYNTHETIC'];
@@ -40,13 +42,13 @@ const HomeScreen = ({navigation}) => {
     );
   };
 
-  const Card = ({plant}) => {
+  const Card = ({ product }) => {
     return (
       <TouchableOpacity
         activeOpacity={0.8}
-        onPress={() => navigation.navigate('Details', plant)}>
+        onPress={() => navigation.navigate('Details', product)}>
         <View style={style.card}>
-          <View style={{alignItems: 'flex-end'}}>
+          <View style={{ alignItems: 'flex-end' }}>
             <View
               style={{
                 width: 30,
@@ -54,14 +56,14 @@ const HomeScreen = ({navigation}) => {
                 borderRadius: 20,
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: plant.like
+                backgroundColor: product.like
                   ? 'rgba(245, 42, 42,0.2)'
                   : 'rgba(0,0,0,0.2) ',
               }}>
               <Icon
                 name="favorite"
                 size={18}
-                color={plant.like ? COLORS.red : COLORS.black}
+                color={product.like ? COLORS.red : COLORS.black}
               />
             </View>
           </View>
@@ -72,13 +74,13 @@ const HomeScreen = ({navigation}) => {
               alignItems: 'center',
             }}>
             <Image
-              source={plant.img}
-              style={{flex: 1, resizeMode: 'contain'}}
+              source={product.img}
+              style={{ flex: 1, resizeMode: 'contain' }}
             />
           </View>
 
-          <Text style={{fontWeight: 'bold', fontSize: 17, marginTop: 10}}>
-            {plant.name}
+          <Text style={{ fontWeight: 'bold', fontSize: 17, marginTop: 10 }}>
+            {product.name}
           </Text>
           <View
             style={{
@@ -86,20 +88,20 @@ const HomeScreen = ({navigation}) => {
               justifyContent: 'space-between',
               marginTop: 5,
             }}>
-            <Text style={{fontSize: 19, fontWeight: 'bold'}}>
-              ${plant.price}
+            <Text style={{ fontSize: 19, fontWeight: 'bold' }}>
+              ${product.price}
             </Text>
             <View
               style={{
                 height: 25,
                 width: 25,
-                backgroundColor: COLORS.green,
+                backgroundColor: "#00B761",
                 borderRadius: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
               <Text
-                style={{fontSize: 22, color: COLORS.white, fontWeight: 'bold'}}>
+                style={{ fontSize: 22, color: COLORS.white, fontWeight: 'bold' }}>
                 +
               </Text>
             </View>
@@ -110,37 +112,42 @@ const HomeScreen = ({navigation}) => {
   };
   return (
     <SafeAreaView
-      style={{flex: 1, paddingHorizontal: 20, backgroundColor: COLORS.white}}>
+      style={{ flex: 1, paddingHorizontal: 20, backgroundColor: 'white' }}>
       <View style={style.header}>
         <View>
-          {/* <Text style={{fontSize: 25, fontWeight: 'bold'}}>Welcome to</Text> */}
-          <Text style={{fontSize: 38, color: COLORS.green, fontWeight: 'bold'}}>
-            {/* Plant Shop */}
+          <View>
+            <Icon1 name="arrow-back" style={{ paddingTop: 10 }} size={28} onPress={() => navigation.goBack()} />
+          </View>
+          <Text style={{ fontSize: 25, fontWeight: 'bold' }}>Welcome to</Text>
+          <Text style={{ fontSize: 38, color: '#00B761', fontWeight: 'bold' }}>
+            Annachi App
           </Text>
         </View>
         <Icon name="shopping-cart" size={28} />
       </View>
-      <View style={{marginTop: 30, flexDirection: 'row'}}>
+      <View style={{ marginTop: 30, flexDirection: 'row' }}>
         <View style={style.searchContainer}>
-          <Icon name="search" size={25} style={{marginLeft: 20}} />
+          <Icon name="search" size={25} style={{ marginLeft: 20 }} />
           <TextInput placeholder="Search" style={style.input} />
         </View>
         <View style={style.sortBtn}>
-          <Icon name="sort" size={30} color={COLORS.white} />
+          <Icon name="sort" size={30} color={'white'} />
         </View>
       </View>
+
       <CategoryList />
       <FlatList
-        columnWrapperStyle={{justifyContent: 'space-between'}}
-        showsVerticalScrollIndicator={false}
+        columnWrapperStyle={{ justifyContent: 'space-between' }}
+        showsVerticalScrollIndicator=
+        {false}
         contentContainerStyle={{
           marginTop: 10,
           paddingBottom: 50,
         }}
         numColumns={2}
-        data={plants}
-        renderItem={({item}) => {
-          return <Card plant={item} />;
+        data={fruitProduct}
+        renderItem={({ item }) => {
+          return <Card product={item} />;
         }}
       />
     </SafeAreaView>
@@ -154,7 +161,7 @@ const style = StyleSheet.create({
     marginBottom: 20,
     justifyContent: 'space-between',
   },
-  categoryText: {fontSize: 16, color: 'grey', fontWeight: 'bold'},
+  categoryText: { fontSize: 16, color: 'grey', fontWeight: 'bold' },
   categoryTextSelected: {
     color: COLORS.green,
     paddingBottom: 5,
@@ -199,4 +206,4 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
 });
-export default HomeScreen;
+export default ProductCard;

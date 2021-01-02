@@ -1,4 +1,4 @@
-const plants = [
+const fruitProduct = [
     {
       id: 1,
       name: 'Strawberry',
@@ -22,7 +22,7 @@ const plants = [
       id: 3,
       name: 'Orange',
       price: '25.99',
-      like: false,
+      like: true,
       img:  require('../../assets/image/orange.png'),
       about:
         'Ravenea Plant one of the most popular and beautiful species that will produce clumpms. The storage of water often gives succulent plants a more swollen or fleshy appearance than other plants, a characteristic known as succulence.',
@@ -55,6 +55,42 @@ const plants = [
       about:
         'Potted Plant Ravenea Plant one of the most popular and beautiful species that will produce clumpms. The storage of water often gives succulent plants a more swollen or fleshy appearance than other plants, a characteristic known as succulence.',
     },
+    {
+      id: 7,
+      name: 'Watermelon',
+      price: '50.99',
+      like: false,
+      img:  require('../../assets/image/watermelon.png'),
+      about:
+        'Potted Plant Ravenea Plant one of the most popular and beautiful species that will produce clumpms. The storage of water often gives succulent plants a more swollen or fleshy appearance than other plants, a characteristic known as succulence.',
+    },
+    {
+      id: 8,
+      name: 'Guava',
+      price: '50.99',
+      like: false,
+      img:  require('../../assets/image/guava.png'),
+      about:
+        'Potted Plant Ravenea Plant one of the most popular and beautiful species that will produce clumpms. The storage of water often gives succulent plants a more swollen or fleshy appearance than other plants, a characteristic known as succulence.',
+    },
+    {
+      id: 9,
+      name: 'Kiwi',
+      price: '50.99',
+      like: false,
+      img:  require('../../assets/image/kiwi.png'),
+      about:
+        'Potted Plant Ravenea Plant one of the most popular and beautiful species that will produce clumpms. The storage of water often gives succulent plants a more swollen or fleshy appearance than other plants, a characteristic known as succulence.',
+    },
+    {
+      id: 10,
+      name: 'Cherry',
+      price: '50.99',
+      like: false,
+      img:  require('../../assets/image/cherry.png'),
+      about:
+        'Potted Plant Ravenea Plant one of the most popular and beautiful species that will produce clumpms. The storage of water often gives succulent plants a more swollen or fleshy appearance than other plants, a characteristic known as succulence.',
+    },
   ];
   
-  export default plants;
+  export default fruitProduct;

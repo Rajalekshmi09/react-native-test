@@ -10,7 +10,7 @@ import {
   TextInput,
   TouchableOpacity
 } from 'react-native';
-import Data from '../data/data.json';
+import Data from '../../data/data.json';
 
 var { height, width } = Dimensions.get('window');
 

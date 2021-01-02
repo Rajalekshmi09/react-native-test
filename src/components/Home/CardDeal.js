@@ -1,33 +1,41 @@
 import React, { Component } from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 
 export default class CardDeal extends Component {
-    constructor(props){
-        super(props)
-      }
-    render(){
-        const {type, price ,item} = this.props;
-        return (
-            <View style={styles.container}>
-                <Image
-                     source={require("../../../assets/image/img11.jpeg")}
-                    style={styles.image}
-                />
-            <View style={styles.body}>
-                <Text style={styles.bodyTitle}>{type}</Text>
-                <Text style={styles.bodyItem}>{item}</Text>
-                <Text style={styles.bodyPrice}>
-                {price} <Text style={styles.bodyPriceOri}>$19</Text>
-                </Text>
-                <Text style={styles.bodyTime}>Ends in 05:21:46</Text>
-            </View>
-            <View style={styles.saleOff}>
-                <Text style={styles.saleOffText}>-30%</Text>
-            </View>
-            </View>
-        );
-    }
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    const { type, price, item, onPress, title } = this.props;
+    return (
+      
+        <View style={styles.container}>
+          <View style={styles.imgcard}>
+            <Image
+              source={require("../../../assets/image/mango.png")}
+              style={styles.image}
+            />
+          </View>
+          <TouchableOpacity>
+          <View style={styles.body}>
+
+            <Text style={styles.bodyTitle}>{type}</Text>
+            <Text style={styles.bodyItem}>{item}</Text>
+            <Text style={styles.bodyPrice}>
+              {price} <Text style={styles.bodyPriceOri}>$19</Text>
+            </Text>
+            <Text style={styles.bodyTime}>Ends in 05:21:46</Text>
+          </View>
+          </TouchableOpacity>
+          <View style={styles.saleOff}>
+            <Text style={styles.saleOffText}>-30%</Text>
+          </View>
+
+        </View>
+     
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -36,17 +44,17 @@ const styles = StyleSheet.create({
     padding: 20,
 
     shadowColor: '#222',
-    shadowOffset: {width: 2, height: 2},
+    shadowOffset: { width: 2, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 5,
     borderRadius: 8,
-    backgroundColor: '#fff',
+    backgroundColor: '#f7faf9',
     marginTop: 16,
   },
   image: {
-    width: 60,
-    height: 60,
-    
+    width: 70,
+    height: 80,
+
   },
   body: {
     flex: 1,
@@ -59,7 +67,7 @@ const styles = StyleSheet.create({
   },
   bodyItem: {
     fontSize: 15,
-    
+
   },
   bodyPrice: {
     fontWeight: '500',
@@ -88,4 +96,16 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 10,
   },
+  imgcard: {
+    padding: 8,
+    borderRadius: 5,
+    marginTop: 5,
+    marginBottom: 5,
+    //marginLeft: 9,
+    alignItems: 'center',
+    elevation: 3,
+    shadowOpacity: 0.3,
+    shadowRadius: 50,
+    backgroundColor: 'white',
+  }
 });

@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TextInput ,TouchableOpacity , Header } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Header } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import Icon1 from 'react-native-vector-icons/AntDesign';
-import NavigationDrawerHeader from '../../AppCheck/NavigationDrawerHeader'
+import DrawerMenu from '../../listPages/DrawerMenu';
 export default class SearchBar extends Component {
   // constructor (props){
   //   super(props)
   // }
   render() {
     //const { navigation } = this.props;
-   
+
     return (
 
       <View style={styles.container}>
-        <NavigationDrawerHeader/>
+
+       
+
         {/* <TouchableOpacity onPress={() =>  navigation.openDrawer(SideMenu)}>
         <Icon name="menu" size={30} color="#222" />
         </TouchableOpacity> */}
@@ -27,9 +29,9 @@ export default class SearchBar extends Component {
             <Text style={styles.badgeText}>0</Text>
           </View>
         </View>
-     
+
       </View>
-     
+
     );
   }
 }
@@ -38,9 +40,10 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    
+    backgroundColor: 'skyblue',
+
   },
-  
+
   searchBar: {
     flexDirection: 'row',
     flex: 1,
@@ -56,8 +59,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     paddingVertical: 5,
   },
-  cart:{
-paddingRight: 10,
+  cart: {
+    paddingRight: 10,
   },
   badge: {
     position: 'absolute',

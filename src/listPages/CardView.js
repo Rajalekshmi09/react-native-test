@@ -3,10 +3,19 @@ import { View, Text, Image, ImageBackground, Button } from 'react-native'
 import { TextInput, ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import { LinearGradient } from 'expo-linear-gradient';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon1 from 'react-native-vector-icons/Entypo';
+
 
 const CardView = ({ navigation }) => {
     return (
         <View >
+            <View style={{flexDirection: 'row',justifyContent: 'space-between'}}>
+                <Text style={{ fontWeight: 'bold', fontSize: 18, }}>Recently Viewed</Text>
+                <View style={{ flexDirection: 'row',alignItems: 'center',}} >
+                    <Text style={{ fontWeight: 'bold', fontSize: 18, color: 'gray', }}>View more</Text>
+                    <Icon1 name="chevron-thin-right" size={18} />
+                </View>
+            </View>
 
             {/* <View style={{
                backgroundColor:"#00a46c",
@@ -239,7 +248,7 @@ const CardView = ({ navigation }) => {
                             title="Add"
                         />
                     </View>
-                    </TouchableOpacity>
+                </TouchableOpacity>
 
                 <View
                     // onPress={()=>navigation.navigate("Detail")}

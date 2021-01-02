@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image ,TouchableOpacity} from 'react-native';
 import { Data } from '../app-utils';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import SearchBar from '../components/Home/SearchBar';
@@ -15,7 +15,8 @@ export default class List extends Component {
                     style={{ width: 70, height: 70, margin: 5 }}
                 >
                 </Image>
-                <Text style={styles.text}>{item.text} </Text>
+                <TouchableOpacity>
+                <Text style={styles.text}>{item.text} </Text></TouchableOpacity>
                      <View style={styles.chevron}>   
                         <Icon name="chevron-down" size={15} style={styles.moreIcon}/>
                     </View> 
@@ -27,6 +28,7 @@ export default class List extends Component {
                 <View style={styles.header}>
                    <SearchBar/>
                 </View>
+               
                 <ScrollView >
                     <View>
                         {item}
@@ -62,6 +64,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: 'grey',
         alignItems: 'center',
+        //justifyContent: 'space-between'
     },
     marginLeft: {
         marginLeft: 5,
@@ -71,7 +74,8 @@ const styles = StyleSheet.create({
         marginVertical: 30,
         fontSize: 20,
         fontWeight: 'bold',
-        marginLeft: 10,    
+        marginLeft: 10, 
+      
     },
     
     chevron: {
@@ -79,6 +83,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         alignContent: 'flex-end',
+      
        
     },
     moreIcon: {
